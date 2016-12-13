@@ -1,6 +1,8 @@
 # Owlerflow
 Project - Final Application
 
+Roope Vilo, Valtteri Pesu, Otto Järvinen
+
 Owlerflow is a question and answer site, where a user can submit and answer questions. It is especially designed for students. 
 
 # Instructions
