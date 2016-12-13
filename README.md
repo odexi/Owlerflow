@@ -3,7 +3,9 @@ Project - Final Application
 
 Roope Vilo, Valtteri Pesu, Otto Järvinen
 
-Owlerflow is a question and answer site, where a user can submit and answer questions. It is especially designed for students. 
+Owlerflow is a question and answer site, where a user can submit and answer questions. It is especially designed for students.
+
+Here's the link to our site: http://10.114.32.48:8080/Projekti
 
 # Instructions
 In your Netbeans IDE, go to Team > Git > Clone. For Repository URL type https://github.com/odexi/Owlerflow. Below that type in your Git username and password and click on Next. Select the master branch. Make sure your project directories are alright and click Finish. Netbeans will no build the project.
