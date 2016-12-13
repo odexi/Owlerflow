@@ -1,0 +1,195 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Nunito+Sans|Roboto+Condensed" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="cookie.js"></script>
+
+        <script>
+            getidfromcookie();
+            getnamefromcookie();
+
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="header-responsive">
+                    <div class="appLogo">
+                        <h1><a href="index.html">OWLERFLOW</a></h1>
+                    </div>
+                    <div class="not" id="login-icon">
+                        <a href="#" onclick="document.getElementById('login-popup').style.display = 'block'" style="width:auto;">
+                            <i class="fa fa-sign-in" id="login_icon"></i>
+                        </a>
+                    </div>
+                    <div class="on" id="logged-in">
+                        <a href="#" onclick="document.getElementById('logout-popup').style.display = 'block'" style="width:auto;">
+                            <i class="fa fa-user" id="user-icon"></i>
+                        </a>
+                    </div>
+                    <div class="login-responsive">
+                        <a href="#" onclick="document.getElementById('login-popup').style.display = 'block'">LOG IN</a>
+                        <a href="signup.html">SIGN UP</a>
+                    </div>
+                    <div id="logged-in-responsive">
+                        <p class="username"></p>
+                        <a href="#" class="logout-button"></a>
+                    </div>
+                </div>
+                <div id="menu-icon">
+                    <a href="javascript:void(0);" onclick="myFunction()">
+                        <i class="material-icons" id="menu_icon">menu</i>
+                        <i class="material-icons" id="close-menu">close</i>
+                    </a>
+                </div>
+                <ul class="menu" id="myMenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">TUTORIALS</a></li>
+                    <li><a href="#">QUESTIONS</a></li>
+                    <li><a href="ask.html">ASK</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>            
+        </header>
+        <div class="content">
+            <nav class="secondary">
+                <div class="sorted-by"><p>Recent posts</p></div>
+                <div class="sort-by">
+                    <a href="javascript:void(0);" onclick="sortBy()">Sort By</a>
+                    <ul class="sort-by-menu" id="sort">
+                        <li><a href="#">Most views</a></li>
+                        <li><a href="#">Rating</a></li>
+                        <li><a href="#">Most comments</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Login Screen -->
+            <div id="login-popup" class="modal">
+                <div class="login-screen animate">
+                    <div class="close-btn">
+                        <span onclick="document.getElementById('login-popup').style.display = 'none'" class="close" title="Close Modal"><i class="fa fa-close" style="font-size:30px;"></i></span>
+                    </div>
+                    <form class="login-form" id="login-form">
+                        <label><b>Username</b></label>
+                        <input type="text" placeholder="Enter username" name="username" required>
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter password" name="password" required>
+                        <p id="login-error"></p>
+
+                        <input class="login-btn" type="submit" value="LOG IN" >
+                    </form>
+
+                    <div class="not-account">
+                        <p>Don't you have an account? <a href="signup.html">Sign up here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="logout-popup" class="log-out-modal">
+                <div class="logout-screen">
+                    <div class="close-btn">
+                        <span onclick="document.getElementById('logout-popup').style.display = 'none'" class="close" title="Close Modal"><i class="fa fa-close" style="font-size:30px;"></i></span>
+                    </div>
+                    <h3 id="userv"></h3>
+                    <form id="logout-form">
+                        <input type="submit" value="LOG OUT" />
+                        
+                    </form>
+                </div>
+            </div>
+
+            <!-- RECENT POSTS -->
+            <main class="show-posts">
+                <input type="checkbox" id="load_more" role="button">
+                <label for="load_more" onclick=""><span>Load More</span><span>HIDE</span></label>
+                <ul class="post-list">
+                    
+                </ul>
+
+                <!-- Single post modal -->           
+                <div class="post-modal" id="post_modal">
+                    <div class="modal-content">
+                        <span class="close-post"><i class="fa fa-close" id="close-post-btn"></i></span>
+                        <div class="post-screen-title">
+                            <p id="pop-title">What is the interpretation? Try to figure it out.</p>
+                        </div>
+                        <div class="post-screen-img"><img id="pop-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlcxPLLYRObzbNs4zs6WGg0ChPDvQJV9oOQ0r0mqqn91nemElU"></div>
+                        <div class="post-screen-description">
+                            <p id="pop-content">Nunc ac porta justo. Suspendisse accumsan ante sit amet dui mollis, quis ullamcorper nibh venenatis. Quisque commodo odio eget ultricies pretium. Fusce nec elit id justo imperdiet efficitur. Morbi in erat in ipsum dignissim pharetra bibendum in justo. Nam arcu nisl, euismod id sollicitudin vitae, iaculis non diam. Integer ac rutrum magna.</p>
+                        </div>
+                        <div class="post-info">
+                            <div class="author_and_date">
+                                <p id="pop-author">@KanZiiDokata</p>
+                                <p id="pop-date">10.12.2016</p>
+                            </div>
+                            <div class="dislike">
+                                <i class="fa fa-thumbs-down" id="thumb-down"></i>
+                                <p>71</p>
+                            </div>
+                            <div class="like">
+                                <i class="fa fa-thumbs-up" id="thumb-up"></i>
+                                <p>138</p>
+                            </div>
+                        </div>
+                        <div class="valiviiva"></div>
+                        <div class="comments">
+                            <p style="font-size: 20px;">Comments:</p>
+                            <div class="comment">
+                                <p id="pop-comment">Tapahtumat viime aikoina osoittavat, että kirjallisiin tehtäviin kohdistuva suunnaton mielenkiinto aurinkoisena kevätpäivänä pakottaa kohderyhmää huomioimaan reaktiota tämänhetkisen tilanteen suhteen. </p>
+                                <div class="comment-info">
+                                    <div class="comment-author_and_date">
+                                        <p id="pop-comaut">@peraroori</p>
+                                        <p id="pop-comdat">11.12.2016</p>
+                                    </div>
+                                    <!--
+                                    <div class="comment_likes">
+                                        <div class="like_comment">
+                                            <i class="fa fa-thumbs-up" id="thumb-up"></i>
+                                            <p>12</p>
+                                        </div>
+                                        <div class="dislike_comment">
+                                            <i class="fa fa-thumbs-down" id="thumb-down"></i>
+                                            <p>101</p>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <form class="add-comment">
+                            <div>
+                                <textarea rows="10" name="comment" id="comment" placeholder="Comment"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" name="submit" value="Add Comment">
+                                <textarea rows="1" name="userid" id="comuserid" ></textarea>
+                                <textarea rows="1" name="postid" id="compostid" ></textarea>
+                                <!--  class="user_id"  class="user_name"   -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer></footer>
+        <script src="main.js"></script>
+       <script src="post.js"></script>
+
+
+    </body>
+</html>

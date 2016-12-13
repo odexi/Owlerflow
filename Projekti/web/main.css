@@ -1,0 +1,1298 @@
+main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/****************************/
+/********HEADER + MENU*******/
+/****************************/
+
+header {
+    height: 50px;
+    background: #1e282e;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #BDD4DE;
+    z-index: 1;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #1e282e;
+    width: 100%;
+}
+
+.menu li {
+    display: none;
+}
+
+.menu.dropdown {
+    opacity: 1;
+
+}
+
+.menu.dropdown li {
+    float: none;
+    display: inline;
+}
+
+.menu.dropdown li a {
+    height: 50px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 55px;
+    color: #ff5167;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.menu.dropdown li a:hover {
+    background: #BDD4DE;
+    color: #1e282e;
+}
+
+#menu-icon {
+    top: 10px;
+    right: 15px;
+    text-align: center;
+    position: absolute;
+}
+
+#menu-icon a {
+    display: block;
+    color: #ff5167;
+}
+
+#menu_icon {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#menu_icon:hover {
+    opacity: 0.5;
+}
+
+#close-menu {
+    display: none;
+}
+/*add display none*/
+#login-icon {
+    top: 13px;
+    right: 70px;
+    text-align: center;
+    position: absolute;
+}
+
+.logout-screen {
+    text-align: center;
+}
+
+#logout-form {
+    text-align: center;
+}
+
+#logout-form input {
+    background: #BDD4DE;
+    color: black;
+    cursor: pointer;
+    width: 40%;
+    height: 30px;
+    font-size: 13px;
+    border-radius: 5px;
+    line-height: 2.05em;
+    font-weight: bold; 
+    margin-top: 20px;
+}
+
+#logout-form input:hover{
+    background: #C8CC67;
+    opacity: 0.8;
+}
+
+#login_icon {
+    font-size: 24px; 
+    color: #BDD4DE;
+    width: auto;
+}
+
+#login_icon:hover {
+    opacity: 0.5;
+}
+
+.login-responsive {
+    display: none;
+}
+
+.login-responsive a {
+    display: none;
+}
+/* delete display:none */
+#logged-in {
+    top: 13px;
+    right: 70px;
+    text-align: center;
+    position: absolute;
+    display: none;
+
+}
+
+#user-icon {
+    line-height: 22px;
+    font-size: 20px; 
+    color: #BDD4DE;
+    width: auto;
+
+}
+
+#logged-in-responsive {
+    display: none;
+}
+
+.username {
+
+}
+
+.logout-btn {
+
+}
+
+.appLogo {
+    float: left;
+    height: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.appLogo h1 {
+    font-size: 15px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.appLogo a {
+    text-decoration: none;
+    color: #BDD4DE;
+}
+
+.appLogo a:link {
+    text-decoration: none;
+}
+
+.appLogo a:hover {
+    color: #BDD4DE;
+}
+
+
+/****************************/
+/*******HOME PAGE MENU*******/
+/****************************/
+
+/*.content {
+    width: 100%;
+    height:100%;
+    margin-top: 70px;
+}*/
+
+.content {
+    width: 100%;
+    height:100%;
+    margin-top: 70px;
+}
+
+.secondary {
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid gray;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.sorted-by {
+    width: 47%;
+    float: left;
+    text-align: left;
+    margin-left: 10px;
+    height: 25px;
+    line-height: 1.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sort-by {
+    height: 25px;
+    width: 49%;
+    float: right;
+    text-align: right;
+    display: block;
+    line-height: 25px;
+}
+
+.sort-by a:first-child {
+    margin-right: 10px;
+}
+
+.sort-by-menu {
+    list-style-type: none;
+    width: 100%;
+    float: right;
+    margin: 0;
+    padding: 0;
+    background: #1e282e;
+    width: 100%;
+    position: relative;
+}
+
+.sort-by-menu li {
+    display: none;
+}
+
+.sort-by-menu li a{
+    line-height: 2.2em;
+    height: 30px;
+}
+
+.sort-by-menu.dropdown {
+    display: block;
+    text-align: left;
+}
+
+.sort-by-menu.dropdown li {
+    width: 100%;
+    display: inline;
+}
+
+.sort-by-menu.dropdown a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #BDD4DE;
+    padding-left: 5px;
+}
+
+.sort-by-menu.dropdown a:hover {
+    background: grey;
+}
+
+
+/****************************/
+/****Front page post list****/
+/****************************/
+
+.show-posts {
+    position: relative;
+}
+
+.show-posts:before, .show-posts:after {
+    content: "";
+    display: block;
+}
+
+.show-posts:after {
+    clear: both;
+}
+
+.post-list {
+    width: 100%;
+    max-width: 40em;
+    list-style: none;
+    padding-left: 0;
+    list-style-position: inside;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-list li {
+    display: block;
+    list-style-type: none;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(94,94,94,1);
+    -moz-box-shadow: 2px 2px 10px 0px rgba(94,94,94,1);
+    box-shadow: 2px 2px 10px 0px rgba(94,94,94,1);
+}
+
+.post-list li:nth-child(n+5) {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox] {
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+input[type=checkbox] { 
+    border: 0; 
+    clip: rect(0 0 0 0);  
+    height: 1px;    
+    width: 1px;  
+    margin: -1px;    
+    overflow: hidden;    
+    padding: 0;    
+    position: absolute;
+}
+
+[for="load_more"] {    
+    bottom: -9rem;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1) inset, -1px -1px rgba(0, 0, 0, 0.1) inset;
+    padding: 0.65rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 240px;
+    cursor: pointer;
+}
+
+[for="load_more"]:hover {
+    background: #cfcfcf;
+    color: #fff;
+}
+
+[for="load_more"] span:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ ul li {
+    display: block;
+    visibility: visible;
+}
+
+input[type=checkbox]:checked ~ 
+[for="load_more"] span:first-of-type{
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~
+[for="load_more"] span:last-of-type {
+    visibility: visible;
+    display:block
+}
+
+.post-content {    
+    margin: 15px 0px 15px 0px;
+    height: 100px;
+    width: 100%;
+}
+
+.post-title {
+    width: 75%;
+    float: left;
+    height: 70%;
+    text-align: left;
+}
+
+.post-title a {
+    font-size: 13px;
+    padding-left: 9px;
+    padding-top: 5px;
+    display: block;
+}
+
+.post-author {
+
+    width: 40%;
+    float: left;
+    height: 30%;
+    text-align: left;
+    line-height: 24px;
+    background: #BDD4DE; 
+}
+
+.post-author p {
+    font-size: 9px;
+    padding-left: 9px;
+    line-height: 30px;
+}
+
+.post-date {
+    float: left;
+    height: 30%;
+    width: 60%;
+    line-height: 24px;
+    background: #BDD4DE; 
+
+}
+
+.post-date p {
+    font-size: 9px;
+    padding-right: 10px;
+    color: black;
+    text-align: right;
+    line-height: 30px;
+}
+
+
+/************************
+*******POST MODAL********
+*************************/
+
+.post-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    max-height: 80%;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    height: auto;
+    width: 95%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+#close-post-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    color: #3F5765;
+    opacity: 0.5;
+    opacity: 1;
+    font-size: 30px;
+}
+
+#close-post-btn:hover {
+    color: #3F5765;
+    opacity: 0.6;
+}
+
+.pop-title{
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.post-screen-img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.post-screen-img img{
+    height: 180px;
+}
+
+.post-screen-description {
+    margin-top: 20px;
+}
+
+.post-info {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    padding: 3px;
+    background: #D7F1FC;
+}
+
+.author_and_date {
+    width: 70%;
+    height: 50px;
+    float: left;
+}
+
+.like {
+    height: 50px;
+    width: 15%;
+    text-align: center;
+    float: right;
+}
+
+.dislike {
+    height: 50px;
+    width: 15%;
+    float: right;
+    text-align: center;
+}
+
+#thumb-up {
+    font-size: 25px;
+    color: #C8CC67;
+    text-shadow: 0px 0px 2px black;
+}
+
+#thumb-down {
+    font-size: 25px;
+    color: #FF5167;
+    text-shadow: 0px 0px 2px black;
+}
+
+.author_and_date p {
+    line-height: 17px;
+    padding-left: 3px;
+}
+
+.valiviiva {
+    margin-top: 20px;
+    height: 1px;
+    background: #3F5765;
+}
+
+.comments {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.comment {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    background: #e8e8e8;
+}
+
+.comment-info {
+    height: 50px;
+    width: 100%;
+    padding: 3px;
+    margin-top: 20px;
+}
+
+.comment-author_and_date {
+    height: 50px;
+    width: 60%;
+    float: left;
+}
+
+.comment-author_and_date {
+    line-height: 17px;
+    padding-left: 3px;
+}
+
+.comment_likes {
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+
+.like_comment {
+    width: 50%;
+    height: 50px;
+    float: left;
+}
+
+.dislike_comment {
+    width: 50%;
+    height: 50px;
+    float: right;
+}
+
+
+.add-comment {
+    margin-top: 40px;
+}
+
+.add-comment textarea:first-child {
+    border: 4px solid rgba(0,0,0,0.1);
+    padding: 8px 10px;
+    width: 100%;
+    height: 150px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: 0;
+    resize: none;
+}
+
+.add-comment input[type="submit"] {
+    border: 4px solid rgba(0,0,0,0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, #efefef, #ddd);
+    background: -moz-linear-gradient(top, #efefef, #ddd);
+    background: -ms-linear-gradient(top, #efefef, #ddd);
+    background: -o-linear-gradient(top, #efefef, #ddd);
+    background: linear-gradient(top, #efefef, #ddd);
+    color: #333;
+    text-shadow: 0px 1px 1px rgba(255,255,255,1);
+    border: 1px solid #ccc;
+}
+
+.add-comment input[type="submit"]:hover {
+    background: -webkit-linear-gradient(top, #eee, #ccc);
+    background: -moz-linear-gradient(top, #eee, #ccc);
+    background: -ms-linear-gradient(top, #eee, #ccc);
+    background: -o-linear-gradient(top, #eee, #ccc);
+    background: linear-gradient(top, #eee, #ccc);
+    border: 1px solid #bbb;
+}
+
+.add-comment input[type="submit"]:active {
+    background: -webkit-linear-gradient(top, #ddd, #aaa);
+    background: -moz-linear-gradient(top, #ddd, #aaa);
+    background: -ms-linear-gradient(top, #ddd, #aaa);
+    background: -o-linear-gradient(top, #ddd, #aaa);
+    background: linear-gradient(top, #ddd, #aaa);	
+    border: 1px solid #999;
+}
+
+.user_id {
+    display: none;
+}
+
+.user_name {
+    display: none;
+}
+
+/*********************/
+/****Log in screen****/
+/*********************/
+
+.login-form input[type=text],.login-form input[type=password] {
+    width: 100%;
+    padding: 4px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.login-form label {
+    width:100%;
+    text-align: center;
+    color: black;
+}
+
+
+
+.login-btn {
+    background: #BDD4DE;
+    color: black;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 40%;
+    height: 30px;
+    margin-left: 30%;
+    font-size: 13px;
+    border-radius: 5px;
+    line-height: 2.05em;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background: #C8CC67;
+    opacity: 0.8;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.close-btn {
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 6px;
+}
+
+.close-btn span{
+    color: #ff5167;
+    opacity: 0.5;
+    opacity: 1;
+}
+
+.close-btn span:hover {
+    color: #ff5167;
+    opacity: 0.6;
+}
+/* Modal Content/Box */
+.login-screen {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.login-form {
+    padding: 25px;
+}
+
+.not-account {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+/********************/
+/***Log out screen***/
+/********************/
+
+
+
+.log-out-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.logout-screen {
+    background-color: #fefefe;
+    margin: 0px auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 60%; /* Could be more or less, depending on screen size */
+    height: 150px;
+}
+
+/********************/
+/****Sign up page****/
+/********************/
+
+.signup-title {
+    float: left;
+    width: 100%;
+}
+
+.signup-title h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+
+.signup-form {
+    text-align: center;
+}
+
+.signup-main{
+    margin-bottom: 40px
+}
+
+.signup-form input[type=text], .signup-form input[type=email], .signup-form input[type=password]{
+
+    width: 200px;
+    margin-bottom: 10px;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #BDD4DE;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.signup-form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: lightslategrey;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+
+.signup-form label {
+    text-align: center;
+    width: 60%;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+.signup-btn {
+    background: #1e282e;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    font-size: 13px;
+    line-height: 2.4em
+}
+
+.signup-btn:hover {
+    opacity: 0.8;
+}
+
+/*********************/
+/******Ask page*******/
+/*********************/
+
+.ask-title h3 {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    height: 100%;
+    text-decoration: underline;
+}
+
+.ask-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40em;
+}
+
+.ask-form label {
+    margin-bottom: 3px;
+    margin-top: 5px;
+    color: #1e282e;
+    width: 100%;
+}
+
+.ask-form input[type=text]{
+    width: 100%;
+    margin-bottom:  10px;
+    border: 4px solid rgba(0,0,0,0.1);
+    padding-left: 3px;
+    width: 100%;
+    height: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.upload-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+.choose-file {
+    margin-bottom: 10px;
+}
+
+.ask-form textarea {
+    border: 4px solid rgba(0,0,0,0.1);
+    padding: 8px 10px;
+    width: 100%;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: 0;
+    resize: none;
+}
+
+#author {
+    display: none;
+}
+
+.post-btn {
+    border-radius: 5px;
+    width: 75px;
+    height: 35px;
+    font-size: 13px;
+    background: #1e282e;
+    color: #efefef;
+    margin-left: auto;
+}
+
+.post-btn:hover {
+    opacity: 0.5;
+}
+
+.post-btn-div {
+    height: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+/****************************/
+/******Single post page******/
+/****************************/
+
+.post-page-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: #07A8A4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.post-page-img {
+    width: 100%;
+    height: auto;
+}
+
+.post-page-question {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.vote-container {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.up-vote {
+    width: 20%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.up-vote a {
+    color: darkgreen;
+}
+
+.down-vote {
+    width: 20%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.down-vote a{
+    color: firebrick;
+}
+
+.vote-counter {
+    width: 60%;
+    float: left;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.vote-counter p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.post-page-footer {
+    margin-top: 50px;
+}
+
+.answer-section-title {
+    margin-top: 20px;
+}
+
+/**********************/
+/********ABOUT*********/
+/**********************/
+
+
+.about {
+    text-align: center;
+}
+
+
+.about img {
+    margin-top: 30px;
+}
+
+/*********************/
+/*******Footer********/
+/*********************/
+
+footer {
+    width: 100%;
+    background: #1e282e;
+    height: 150px;
+}
+
+/***********************************
+************************************
+**********MEDIA QUERIES*************
+************************************
+***********************************/
+
+
+
+@media screen and (min-width: 780px) {
+
+    header {
+        height: 100px;
+        width: 100%;
+    }
+
+    .menu {
+        width: 780px;
+        height: 49px;
+        margin-left: auto;
+        margin-right: auto;
+        border-top: 1px solid #BDD4DE;
+    }
+
+    .menu li {
+        display: inline;
+        text-align: left;
+        padding: 0;
+    }
+
+    .menu li:not(:first-child) {
+        margin-left: 100px;
+    }
+
+    .menu li:first-child {
+        margin-left: 5px;
+    }
+
+    .menu li:last-child {
+        margin-right: 5px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        display: inline;
+        font-size: 15px;
+        color: #FF5167;
+        font-weight: bold;
+        font-family: 'Nunito Sans', sans-serif;
+        line-height: 50px;
+        letter-spacing: 2px;
+    }
+
+    .menu li a:hover {
+        color: #BDD4DE;
+    }
+
+    .header-responsive {
+        width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+        text-align: center;
+    }
+
+    .appLogo {
+        width: 30%;
+        text-align: left;
+        float: left;
+        margin-left: 3px;
+    }
+
+    .appLogo h1 {
+        line-height: 25px;
+        font-size: 30px;
+        letter-spacing: 3px;
+        text-shadow: 2px 0px #FF5167;
+        font-weight: bold;
+
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    #login-icon {
+        display: none;
+    }    
+
+    .login-responsive {
+        float: right;
+        width: 20%;
+        height: 50px;
+        display: inherit;
+    }
+
+    .login-responsive a {
+        text-align: center;
+        display: inline;
+        margin: auto;
+        width: 60px;
+        float: right;
+        font-size: 12px;
+        text-decoration: none;
+        color: #BDD4DE;
+        line-height: 24px;
+        margin-left: 5px;
+    }
+
+    .login-responsive a:link {
+        text-decoration: none;
+    }
+
+    .login-responsive a:hover {
+        opacity: 0.8;
+        color: black;
+        background: #BDD4DE;
+    }
+
+    .content {
+        margin-top: 120px;
+        margin-bottom: 50px;
+        width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .post-list li {
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+
+    .post-title a{
+        font-size: 15px;
+    }
+    
+    .post-author p {
+        font-size: 12px;
+    }
+    
+    .post-date p {
+        font-size: 12px;
+    }
+
+    .login-form input[type=text], .login-form input[type=password] {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .login-screen {
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        width: 30%;
+    }
+
+    .signup-form {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .signup-form input[type=text], .signup-form input[type=email], .signup-form input[type=password]{
+        margin-bottom: 10px;
+    }
+
+    .post-modal {
+        margin-top: 100px;
+    }
+
+    .modal-content {
+        width: 780px;
+        height: 80%;
+        padding-left: 80px;
+    }
+
+    .post-screen-content {
+
+    }
+
+    .post-screen-title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .post-screen-img {
+        width: 100%;
+    }
+
+    .post-screen-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    .post-screen-description {
+        width: 80%;
+    }
+
+    .post-info {
+        width: 80%;
+    }
+
+    .comments {
+        width: 80%;
+    }
+
+    .add-comment {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+

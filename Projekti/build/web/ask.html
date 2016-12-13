@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Nunito+Sans|Roboto+Condensed" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="cookie.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <div class="header-responsive">
+                    <div class="appLogo">
+                        <h1><a href="index.html">OWLERFLOW</a></h1>
+                    </div>
+                    <div class="not" id="login-icon">
+                        <a href="#" onclick="document.getElementById('login-popup').style.display='block'" style="width:auto;">
+                            <i class="fa fa-sign-in" id="login_icon"></i>
+                        </a>
+                    </div>
+                    <div class="on" id="logged-in">
+                        <a href="#" onclick="document.getElementById('logout-popup').style.display = 'block'" style="width:auto;">
+                            <i class="fa fa-user" id="user-icon"></i>
+                        </a>
+                    </div>
+                    <div class="login-responsive">
+                        <a href="#" onclick="document.getElementById('login-popup').style.display='block'">LOG IN</a>
+                        <a href="signup.html">SIGN UP</a>
+                    </div>
+                </div>
+                <div id="menu-icon">
+                    <a href="javascript:void(0);" onclick="myFunction()">
+                        <i class="material-icons" id="menu_icon">menu</i>
+                        <i class="material-icons" id="close-menu">close</i>
+                    </a>
+                </div>
+                <ul class="menu" id="myMenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">TUTORIALS</a></li>
+                    <li><a href="#">QUESTIONS</a></li>
+                    <li><a href="ask.html">ASK</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>            
+        </header>
+        <div id="login-popup" class="modal">
+            <div class="login-screen animate">
+                <div class="close-btn">
+                    <span onclick="document.getElementById('login-popup').style.display='none'" class="close" title="Close Modal"><i class="fa fa-close" style="font-size:30px;"></i></span>
+                </div>
+                <form class="login-form" id="login-form">
+                        <label><b>Username</b></label>
+                        <input type="text" placeholder="Enter username" name="username" required>
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter password" name="password" required>
+                        <p id="login-error"></p>
+
+                        <input class="login-btn" type="submit" value="LOG IN" >
+                    </form>
+                
+                <div class="not-account">
+                    <p>Don't you have an account? <a href="signup.html">Sign up here</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div id="logout-popup" class="log-out-modal">
+                <div class="logout-screen">
+                    <div class="close-btn">
+                        <span onclick="document.getElementById('logout-popup').style.display = 'none'" class="close" title="Close Modal"><i class="fa fa-close" style="font-size:30px;"></i></span>
+                    </div>
+                    <h3 id="userv"></h3>
+                    <form id="logout-form">
+                        <input type="submit" value="LOG OUT" />
+                        
+                    </form>
+                </div>
+            </div>
+        <div class="content">
+            <main class="ask-main">
+                <div class="ask-title"><h3>ASK</h3></div>
+                <form class="ask-form" enctype="multipart/form-data" method="post" action="upload">
+                <label><b>Title</b></label>
+                <input type="text" placeholder="What is your question about?" name="question-title">
+                <label><b>Add image</b></label>
+                <input type="file" class="choose-file" name="temp" accept="image/*">
+
+                <label><b>Body</b></label>
+                <textarea name="cont" rows="10" cols="30" placeholder="Write a question..."></textarea>
+                <label><b>Tags</b></label>
+                <select name="tag">
+                    <option  value="Math">Math</option>
+                    <option value="Java">Java</option>
+
+                </select>
+
+                <textarea id="author" name="autid" rows="1" cols="20" placeholder="You are not logged in.." readonly></textarea>
+                <div class="post-btn-div">
+                    <input class="post-btn" type="submit" value="POST">
+                </div>
+            </form>
+            </main>
+        </div>
+        <footer></footer>   
+        <script src="main.js"></script>
+        <script src="ask.js"></script>
+    </body>
+    
+    
+        
+</html>
